@@ -19,3 +19,4 @@ starviewer/serverlist.dat
 *.sdf
 starviewer_source/starviewer.opensdf
 release/ref_gl/ref_pbgl.lib
+starviewer/configs/keyhistory.dat
