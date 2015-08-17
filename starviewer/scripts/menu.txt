@@ -1,0 +1,184 @@
+/* Mouse Cursor */
+pics/cursor
+{
+	safe
+	{
+		map pics/cursor.tga
+		blendfunc blend
+	}
+	{
+		map pics/cursor_glow.tga
+		blendfunc blend
+		alphashift 5 0 1
+	}
+}
+
+pics/cursor_text
+{
+	safe
+	{
+		map pics/cursor_text.tga
+		blendfunc blend
+	}
+	{
+		map pics/cursor_text_glow.tga
+		blendfunc blend
+		alphashift 5 0 1
+	}
+}
+
+/* image behind text links */
+pics/text1bgh
+{
+	safe
+	{
+		map pics/text1bgh.tga
+		blendfunc blend
+	}
+	{
+		map pics/text1bg.tga
+		blendfunc blend
+		alphashift 5 0 1
+	}
+}
+
+
+/* Color selection cursor */
+pics/8x8select
+{
+	safe
+	{
+		map pics/8x8select.tga
+		blendfunc blend
+	}
+
+	{
+		map pics/8x8selecth.tga
+		blendfunc blend
+		alphashift 5 0 1
+	}
+}
+
+
+
+/* Field Left Edge */
+pics/field1l
+{
+	safe
+	{
+		map pics/widgets1.tga
+		blendfunc blend
+		scale static 0.3125 static 0.1875
+		offset 1.8 0
+	}
+}
+
+pics/field1lh
+{
+	safe
+	{
+		map pics/widgets1.tga
+		blendfunc blend
+		scale static 0.3125 static 0.1875
+		offset 1.8 1
+	}
+}
+
+pics/field1ls
+{
+	safe
+	{
+		map pics/widgets1s.tga
+		blendfunc blend
+		scale static 0.3125 static 0.1875
+		offset 1.8 0
+	}
+}
+
+/* Field Right Edge */
+pics/field1r
+{
+	safe
+	{
+		map pics/widgets1.tga
+		blendfunc blend
+		scale static 0.3125 static 0.1875
+		offset 2.2 0
+	}
+}
+
+pics/field1rh
+{
+	safe
+	{
+		map pics/widgets1.tga
+		blendfunc blend
+		scale static 0.3125 static 0.1875
+		offset 2.2 1
+	}
+}
+
+pics/field1rs
+{
+	safe
+	{
+		map pics/widgets1s.tga
+		blendfunc blend
+		scale static 0.3125 static 0.1875
+		offset 2.2 0
+	}
+}
+
+
+/* Field Middle */
+pics/field1m
+{
+	safe
+	{
+		map pics/widgets1.tga
+		blendfunc blend
+		scale static 0.3125 static 0.1875
+		offset 2.0 0
+	}
+}
+
+pics/field1mh
+{
+	safe
+	{
+		map pics/widgets1.tga
+		blendfunc blend
+		scale static 0.3125 static 0.1875
+		offset 2.0 1
+	}
+}
+
+pics/field1ms
+{
+	safe
+	{
+		map pics/widgets1s.tga
+		blendfunc blend
+		scale static 0.3125 static 0.1875
+		offset 2.0 0
+	}
+}
+
+
+
+
+/* Select Background Hover */
+pics/select1bh
+{
+	safe
+	{
+		map pics/select1bs.tga
+		blendfunc blend
+	}
+	{
+		map pics/select1bh.tga
+		blendfunc blend
+		alphashift 5 0 1
+	}
+}
+

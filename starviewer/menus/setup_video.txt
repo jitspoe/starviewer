@@ -1,0 +1,149 @@
+pb2menu 1
+
+widget 
+	type pic	
+	xcent 0
+	halign center	
+	yabs 16
+	pic "m_setup1s"
+
+widget
+	xabs 16
+	yabs 64
+	text "Resolution:"
+	
+widget
+	yrel 14
+	type select
+	width 10
+	size 5
+	begin pairs
+		0	"320x240"
+		1	"400x300"
+		2	"512x384"
+		3	"640x480"
+		12	"720x480"
+		13	"720x576"
+		4	"800x600"
+		14	"848x480"
+		15	"960x600"
+		5	"960x720"
+		16	"1088x612"
+		6	"1024x768"
+		7	"1152x864"
+		17	"1280x720"
+		18	"1280x768"
+		19	"1280x800"
+		8	"1280x960"
+		9	"1280x1024"
+		25	"1366x768"
+		21	"1440X900"
+		26	"1600x900"
+		10	"1600x1200"
+		20	"1680x1050"
+		23	"1920x1080"
+		22	"1920x1200"
+		24	"1920x1440"
+		11	"2048x1536"
+	end
+	cvar "gl_mode"
+
+widget
+	yabs 140
+	text "Fullscreen"
+	type checkbox
+	cvar vid_fullscreen
+
+widget
+	yrel 16
+	text "Refresh Rate:"
+
+widget
+	yrel 14
+	width 8
+	height 3
+	type select
+	begin pairs
+		0	"Default"
+		60	"60Hz"
+		70	"70Hz"
+		72	"72Hz"
+		75	"75Hz"
+		85	"85Hz"
+		90	"90Hz"
+		100	"100Hz"
+		120	"120Hz"
+		150	"150Hz"
+		160	"160Hz"
+		200	"200Hz"
+	end
+	cvar r_displayrefresh
+
+widget
+	yrel 40
+	text "Apply"
+	xrel 8
+	command "vid_restart"
+
+
+
+widget
+	yabs 64
+	xcent 0
+	type checkbox
+	text "Vertical Sync"
+	cvar gl_swapinterval
+
+widget
+	yrel 16
+	type checkbox
+	text "Reflective Water"
+	cvar_default 1
+	cvar r_reflectivewater
+
+widget
+	yrel 20
+	text "Shadows:"
+
+widget
+	yrel 14
+	type select
+	width 7
+	height 3
+	begin pairs
+		0	None
+		1	Fast
+		2	Stencil
+	end
+	cvar gl_shadows
+
+widget
+	yrel -14
+	xrel 80
+	text "Caustics:"
+
+widget
+	yrel 14
+	type select
+	width 7
+	height 3
+	begin pairs
+		0	Off
+		1	"1 Pass"
+		2	"2 Pass"
+	end
+	cvar_default 2
+	cvar r_caustics
+
+widget
+	xcent -52
+	ycent 64
+	text "Gamma/Brightness Settings"
+	command "menu setup_gamma"
+
+widget
+	yrel 16
+	text "Texture/Lightmap Settings"
+	command "menu setup_texture"
+
+include back_include

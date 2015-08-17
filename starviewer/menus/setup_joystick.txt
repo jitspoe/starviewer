@@ -1,0 +1,202 @@
+pb2menu 1
+
+
+include setup_header_include
+
+
+
+
+
+widget
+	xcent -128
+	yabs 64
+	halign center
+	text "Look"
+	command "menu samelevel setup_controls"
+
+widget
+	xrel 85
+	halign center
+	text "Weapon"
+	command "menu samelevel setup_controls_weapon"
+
+widget
+	xrel 86
+	halign center
+	text "Move"
+	command "menu samelevel setup_controls_move"
+
+widget
+	xrel 85
+	halign center
+	text "Misc"
+	command "menu samelevel setup_controls_misc"
+
+
+
+
+
+widget
+	y 88
+	xcent -8
+	text "Enable Joystick"
+	halign right
+	type checkbox
+	cvar in_joystick
+
+widget
+	yrel 10
+	text "Advanced Settings"
+	halign right
+	type checkbox
+	cvar joy_advanced
+
+widget
+	yrel 10
+	text "X-Axis"
+	halign right
+	type select
+	width 9
+	height 2
+	begin pairs
+		0	"Disable"
+		1	"Forward"
+		2	"Look"
+		3	"Sidestep"
+		4	"Turn"
+		5	"Jump"
+	end
+	cvar joy_advaxisx
+
+widget
+	yrel 24
+	text "Y-Axis"
+	halign right
+	type select
+	width 9
+	height 2
+	begin pairs
+		0	"Disable"
+		1	"Forward"
+		2	"Look"
+		3	"Sidestep"
+		4	"Turn"
+		5	"Jump"
+	end
+	cvar joy_advaxisy
+
+widget
+	yrel 24
+	text "Z-Axis"
+	halign right
+	type select
+	width 9
+	height 2
+	begin pairs
+		0	"Disable"
+		1	"Forward"
+		2	"Look"
+		3	"Sidestep"
+		4	"Turn"
+		5	"Jump"
+	end
+	cvar joy_advaxisz
+
+widget
+	yrel 24
+	text "R-Axis"
+	halign right
+	type select
+	width 9
+	height 2
+	begin pairs
+		0	"Disable"
+		1	"Forward"
+		2	"Look"
+		3	"Sidestep"
+		4	"Turn"
+		5	"Jump"
+	end
+	cvar joy_advaxisr
+
+widget
+	y 88
+	xcent 8
+	text "U-Axis"
+	type select
+	width 9
+	height 2
+	begin pairs
+		0	"Disable"
+		1	"Forward"
+		2	"Look"
+		3	"Sidestep"
+		4	"Turn"
+		5	"Jump"
+	end
+	cvar joy_advaxisu
+
+widget
+	yrel 24
+	text "V-Axis"
+	type select
+	width 9
+	height 2
+	begin pairs
+		0	"Disable"
+		1	"Forward"
+		2	"Look"
+		3	"Sidestep"
+		4	"Turn"
+		5	"Jump"
+	end
+	cvar joy_advaxisv
+
+widget
+	yrel 24
+	text "Forward Sensitivity"
+	type field
+	width 3
+	cvar joy_forwardsensitivity
+
+widget
+	yrel 14
+	text "Side Sensitivity"
+	type field
+	width 3
+	cvar joy_sidesensitivity
+
+widget
+	yrel 14
+	text "Up/Jump Sensitivity"
+	type field
+	width 3
+	cvar joy_upsensitivity
+
+widget
+	yrel 14
+	text "Pitch Sensitivity"
+	type field
+	width 3
+	cvar joy_pitchsensitivity
+
+widget
+	yrel 14
+	text "Yaw Sensitivity"
+	type field
+	width 3
+	cvar joy_yawsensitivity
+
+
+
+
+
+widget
+	ybot -32
+	xcent 0
+	halign center
+	text "Apply Settings"
+	command "joy_advancedupdate"
+
+
+include back_include

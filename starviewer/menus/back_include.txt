@@ -1,0 +1,10 @@
+pb2menu 1
+
+widget
+	type button
+	valign bottom
+	ybot -4
+	xabs 10
+	type text
+	command "menu pop"
+	text "Back"

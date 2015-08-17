@@ -1,0 +1,11 @@
+
+pics/loading
+{
+	width 128
+	height 32
+	safe
+	{
+		map pics/loading.tga
+		blendfunc blend	
+	}
+}

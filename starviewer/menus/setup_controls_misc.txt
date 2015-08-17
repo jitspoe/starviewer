@@ -1,0 +1,50 @@
+pb2menu 1
+
+include setup_header_include
+
+
+
+widget
+	xcent -85
+	yabs 64
+	halign center
+	text "Look"
+	command "menu samelevel setup_controls"
+
+widget
+	xrel 85
+	halign center
+	text "Move"
+	command "menu samelevel setup_controls_move"
+
+widget
+	xrel 85
+	halign center
+	text "ˆEMisc"
+	command "menu samelevel setup_controls_misc"
+
+
+widget
+	yrel 32
+	xcent 0
+	halign right
+	cvar win_noalttab
+	type checkbox
+	text "Disable Alt-Tab"
+
+widget
+	xcent 0
+	yrel 16
+	halign center
+	nobackground
+	type select
+	width 38
+	height 10
+	begin binds
+		"+attack"	"   Reset View Pos.: "
+		"screenshot"	"   Take Screenshot: "
+	end
+
+
+
+include back_include

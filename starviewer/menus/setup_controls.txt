@@ -1,0 +1,107 @@
+pb2menu 1
+
+include setup_header_include
+
+
+
+
+
+widget
+	xcent -85
+	yabs 64
+	halign center
+	text "ˆELook"
+	command "menu samelevel setup_controls"
+
+widget
+	xrel 85
+	halign center
+	text "Move"
+	command "menu samelevel setup_controls_move"
+
+widget
+	xrel 85
+	halign center
+	text "Misc"
+	command "menu samelevel setup_controls_misc"
+
+
+
+
+
+widget
+	y 88
+	xcent -8
+	halign right
+	type checkbox
+	cvar m_invert
+	text "Invert Mouse"
+
+
+widget
+	yrel 10
+	halign right
+	type checkbox
+	cvar m_rawinput
+	text "Raw Input"
+
+widget
+	yrel 10
+	halign right
+	type checkbox
+	cvar m_filter
+	text "Mouse Smoothing"
+
+widget
+	yrel 10
+	halign right
+	type checkbox
+	cvar m_noaccel
+	text "Disable Accel"
+
+widget
+	yrel 10
+	type slider
+	halign right
+	cvar sensitivity
+	text "Sensitivity"
+	min .5
+	max 20
+
+widget
+	xcent 0
+	yrel 16
+	halign center
+	nobackground
+	type select
+	width 38
+	height 10
+	begin binds
+		"+lookup"	"           Look Up: "
+		"+lookdown"	"         Look Down: "
+		"+left"		"         Turn Left: "
+		"+right"	"        Turn Right: "
+		"centerview"	"       Center View: "		
+		"+mlook"	"        Mouse Look: "
+		"+klook"	"     Keyboard Look: "
+	end
+
+widget
+	y 88
+	xcent 8
+	type checkbox
+	cvar in_joystick
+	text "Use Joystick"
+
+widget
+	yrel 10
+	type checkbox
+	cvar lookstrafe	
+	text "Look Strafe"
+
+
+widget yrel 16 text "Advanced Joystick"
+	command "menu samelevel setup_joystick"
+
+
+include back_include

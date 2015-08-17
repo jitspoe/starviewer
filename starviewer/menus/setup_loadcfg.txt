@@ -1,0 +1,36 @@
+pb2menu 1
+
+include setup_header_include
+
+widget
+	xcent 0
+	y 48
+	halign center
+	text "LOAD CONFIGURATION"
+
+widget
+	x 80
+	y 60
+	type select
+	rows 10
+	width 20
+	filedir "pball/configs/*.cfg"
+	strip "pball/configs/"
+	cvar menu_loadcfgfile
+
+widget
+	yrel 106
+	cvar menu_loadcfgfile
+	type field
+	width 20
+
+
+widget
+	yrel 16
+	xcent 0
+	halign center
+	text "Load"
+	command "exec $menu_loadcfgfile$; menu pop"
+
+
+include back_include

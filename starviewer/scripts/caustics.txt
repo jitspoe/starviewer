@@ -1,0 +1,113 @@
+
+
+textures/sfx/caustics/caustics1_01
+{
+	{
+		tcgen vector (.02 0 .01) (0 .02 .01)
+		map textures/sfx/caustics/caustics1_09
+		blendfunc GL_DST_COLOR GL_SRC_COLOR
+		scale static -.8 static -.8
+		scroll sin .2 sin .2
+		anim 1
+			textures/sfx/caustics/caustics1_09.jpg
+		end
+	}
+	{
+		tcgen vector (.02 0 .01) (0 .02 .01)
+		map textures/sfx/caustics/caustics1_09
+		blendfunc GL_DST_COLOR GL_SRC_COLOR
+		scale static .7 static .7
+		scroll cos .2 cos .2
+		anim 1
+			textures/sfx/caustics/caustics1_09.jpg
+		end
+	}
+}
+
+
+
+textures/sfx/caustics/caustics1_02
+{
+	{
+		tcgen vector (.02 0 .013) (0 .02 .01)
+		map textures/sfx/caustics/caustics1_01.jpg
+		blendfunc GL_DST_COLOR GL_SRC_COLOR
+		scale static -.7 static -.7
+		scroll cos .12 cos .12
+		anim .03
+			textures/sfx/caustics/caustics1_01.jpg
+			textures/sfx/caustics/caustics1_02.jpg
+			textures/sfx/caustics/caustics1_03.jpg
+			textures/sfx/caustics/caustics1_04.jpg
+			textures/sfx/caustics/caustics1_05.jpg
+			textures/sfx/caustics/caustics1_06.jpg
+			textures/sfx/caustics/caustics1_07.jpg
+			textures/sfx/caustics/caustics1_08.jpg
+			textures/sfx/caustics/caustics1_09.jpg
+			textures/sfx/caustics/caustics1_10.jpg
+			textures/sfx/caustics/caustics1_11.jpg
+			textures/sfx/caustics/caustics1_12.jpg
+			textures/sfx/caustics/caustics1_13.jpg
+			textures/sfx/caustics/caustics1_14.jpg
+			textures/sfx/caustics/caustics1_15.jpg
+			textures/sfx/caustics/caustics1_16.jpg
+			textures/sfx/caustics/caustics1_17.jpg
+			textures/sfx/caustics/caustics1_18.jpg
+			textures/sfx/caustics/caustics1_19.jpg
+			textures/sfx/caustics/caustics1_20.jpg
+			textures/sfx/caustics/caustics1_21.jpg
+			textures/sfx/caustics/caustics1_22.jpg
+			textures/sfx/caustics/caustics1_23.jpg
+			textures/sfx/caustics/caustics1_24.jpg
+			textures/sfx/caustics/caustics1_25.jpg
+			textures/sfx/caustics/caustics1_26.jpg
+			textures/sfx/caustics/caustics1_27.jpg
+			textures/sfx/caustics/caustics1_28.jpg
+			textures/sfx/caustics/caustics1_29.jpg
+			textures/sfx/caustics/caustics1_30.jpg
+			textures/sfx/caustics/caustics1_31.jpg
+			textures/sfx/caustics/caustics1_32.jpg
+		end
+	}
+	{
+		tcgen vector (.021 0 .014) (0 .021 .014)
+		map textures/sfx/caustics/caustics1_01.jpg
+		blendfunc GL_DST_COLOR GL_SRC_COLOR
+		scale static .5 static .5
+		scroll sin .12 sin .12
+		anim .031
+			textures/sfx/caustics/caustics1_01.jpg
+			textures/sfx/caustics/caustics1_02.jpg
+			textures/sfx/caustics/caustics1_03.jpg
+			textures/sfx/caustics/caustics1_04.jpg
+			textures/sfx/caustics/caustics1_05.jpg
+			textures/sfx/caustics/caustics1_06.jpg
+			textures/sfx/caustics/caustics1_07.jpg
+			textures/sfx/caustics/caustics1_08.jpg
+			textures/sfx/caustics/caustics1_09.jpg
+			textures/sfx/caustics/caustics1_10.jpg
+			textures/sfx/caustics/caustics1_11.jpg
+			textures/sfx/caustics/caustics1_12.jpg
+			textures/sfx/caustics/caustics1_13.jpg
+			textures/sfx/caustics/caustics1_14.jpg
+			textures/sfx/caustics/caustics1_15.jpg
+			textures/sfx/caustics/caustics1_16.jpg
+			textures/sfx/caustics/caustics1_17.jpg
+			textures/sfx/caustics/caustics1_18.jpg
+			textures/sfx/caustics/caustics1_19.jpg
+			textures/sfx/caustics/caustics1_20.jpg
+			textures/sfx/caustics/caustics1_21.jpg
+			textures/sfx/caustics/caustics1_22.jpg
+			textures/sfx/caustics/caustics1_23.jpg
+			textures/sfx/caustics/caustics1_24.jpg
+			textures/sfx/caustics/caustics1_25.jpg
+			textures/sfx/caustics/caustics1_26.jpg
+			textures/sfx/caustics/caustics1_27.jpg
+			textures/sfx/caustics/caustics1_28.jpg
+			textures/sfx/caustics/caustics1_29.jpg
+			textures/sfx/caustics/caustics1_30.jpg
+			textures/sfx/caustics/caustics1_31.jpg
+			textures/sfx/caustics/caustics1_32.jpg
+		end
+	}
+}

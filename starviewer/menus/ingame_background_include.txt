@@ -1,0 +1,13 @@
+pb2menu 1
+
+background none
+
+widget
+	type pic
+	xcent 0
+	ycent 0
+	picwidth 240
+	picheight 120
+	bpic border1
+	halign center
+	valign center

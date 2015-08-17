@@ -1,0 +1,83 @@
+pb2menu 1
+
+widget 
+	type pic	
+	xcent 0
+	halign center	
+	yabs 16
+	pic "m_setup1s"
+
+widget
+	x 64
+	yrel 56
+	text "Sound Volume"
+	type slider
+	valign center
+	cvar s_volume
+
+
+widget
+	yrel 16
+	valign center
+	type checkbox
+	text "3D Sound (Experimental- Requires OpenAL)"
+	cvar s_a3d
+
+widget
+	yrel 16
+	valign center
+	type checkbox
+	text "8bit (low quality) sound"
+	cvar s_loadas8bit
+
+
+widget
+	yrel 16
+	valign center
+	type checkbox
+	cvar s_primary
+	text "Disable External Sound"
+
+widget
+	yrel 16
+	valign center
+	type checkbox
+	cvar cd_nocd
+	text "No CD Music"
+
+widget
+	yrel 16
+	valign center
+	type checkbox
+	cvar s_nojump
+	text "Disable Jump Grunt Sound"
+
+widget
+	yrel 8
+	cvar s_mixahead
+	type field
+	width 3
+	text "Sound Mixahead"
+
+widget
+	yrel 16
+	text "Sound Quality"
+	type select
+	width 6
+	rows 2
+	begin pairs
+		11	"11kHz"
+		22	"22kHz"
+		44	"44kHz"
+		48	"48kHz"
+	end
+	cvar s_khz
+
+widget
+	ybot -32
+	xcent 0
+	halign center
+	text "Apply Settings"
+	command "snd_restart"
+
+include back_include

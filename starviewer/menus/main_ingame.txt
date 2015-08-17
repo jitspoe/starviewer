@@ -1,0 +1,41 @@
+pb2menu 1
+
+include ingame_background_include
+
+widget
+	xcent 0
+	ycent -28
+	halign center
+	type button
+	picwidth 180
+	text "Stationary Earth View"
+	command "set hyg_map_to_sphere 1;menu pop"
+
+widget
+	yrel 16
+	xcent 0
+	halign center
+	type button
+	picwidth 180
+	text "Free Flight View"
+	command "set hyg_map_to_sphere 0;menu pop"
+
+
+widget
+	yrel 16
+	xcent 0
+	halign center
+	type button
+	picwidth 180
+	text "Setup"
+	command "menu setup"
+
+
+widget
+	yrel 16
+	xcent 0
+	halign center
+	type button
+	picwidth 180
+	text "Quit"
+	command "quit"

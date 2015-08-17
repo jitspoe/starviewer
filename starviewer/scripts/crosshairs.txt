@@ -1,0 +1,19 @@
+pics/ch2
+{
+	safe
+
+	{
+		map pics/ch2.tga
+		blendfunc add
+	}
+}
+
+pics/ch3
+{
+	safe
+	{
+		map pics/ch3.tga
+		blendfunc add
+	}
+}
+

@@ -1,0 +1,91 @@
+pb2menu 1
+
+command "unset menu_fullmapname"
+
+widget
+	type pic
+	bpic popup1
+	picwidth 300
+	picheight 204
+	xcent 0
+	ycent 0
+	halign center
+	valign center
+
+widget
+	type pic
+	xcent 0
+	yabs 32
+	picwidth 128
+	picheight 32
+	pic "loading"
+	halign center
+
+widget
+	type pic
+	bpic border1
+	picwidth 96
+	picheight 74
+	xcent -80
+	ycent -12
+	halign center
+	valign center
+
+widget
+	type pic
+	picwidth 86
+	picheight 64
+	halign center
+	valign center
+	pic "mapshots/$menu_mapname$"
+	missingpic "mapshots/-no-preview-"
+
+widget
+	type text
+	width 168
+	yrel -32
+	xrel 56
+	halign left
+	text "$menu_fullmapname"
+
+
+widget
+	xcent 0
+	ycent 46
+	type text
+	halign center
+	text "File: $menu_mapname$"
+
+widget
+	xcent 0
+	ycent 72
+	type text
+	halign center
+	valign bottom
+	text "$cs_loadingstatus$"
+
+widget
+	xcent -145
+	yrel 8
+	type text
+	halign left
+	valign bottom
+	text "$cs_loadingbarback$"
+
+widget
+	xrel 0
+	yrel 0
+	type text
+	halign left
+	valign bottom
+	text "$cs_loadingbarfront$"
+
+widget
+	xcent 0
+	yrel 8
+	type text
+	halign center
+	valign bottom
+	text "$cs_downloadspeed$"
+
+	

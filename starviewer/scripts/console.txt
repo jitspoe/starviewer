@@ -1,0 +1,163 @@
+pics/conback
+{
+	safe
+	{
+		map pics/backtile_inv.tga
+		scale static 3 static 4
+		blendfunc blend
+	}
+	{
+		map pics/guntemp_flash.tga
+		blendfunc gl_one_minus_dst_color gl_zero
+	}
+}
+
+pics/conback2
+{
+
+/* right scroller */
+	safe
+	{
+		map pics/con_binary1.tga
+		blendfunc blend
+		scroll static -.1 static 0
+		scale cosabs 2 cosabs 1.33
+
+		offset -.5 -.5
+		alphashift .35 .1 1
+	}
+	{
+		map pics/con_binary1.tga
+		blendfunc blend
+		scroll static -.1 static 0
+		scale cosabs 2 cosabs 1.33
+
+		scaleadd static .05 static 0.033333333333333333333333333333333
+		offset -.5 -.5
+		alphashift .35 0.06 .6
+	}
+	{
+		map pics/con_binary1.tga
+		blendfunc blend
+		scroll static -.1 static 0
+		scale cosabs 2 cosabs 1.33
+
+		scaleadd static .10 static 0.066666666666666666666666666666667
+		offset -.5 -.5
+		alphashift .35 0.036 .36
+	}
+	{
+		map pics/con_binary1.tga
+		blendfunc blend
+		scroll static -.1 static 0
+		scale cosabs 2 cosabs 1.33
+
+		scaleadd static .15 static .1
+		offset -.5 -.5
+		alphashift .35 0.0216 0.216
+
+	}
+
+
+
+
+/* left scroller */
+
+	{
+		map pics/con_binary2.tga
+		blendfunc blend
+		scroll static .12 static 0
+		scale sinabs 2 sinabs 1.33
+		rotate -5
+
+		offset -.5 -.5
+		alphashift .3 0.1 1
+	}
+	{
+		map pics/con_binary2.tga
+		blendfunc blend
+		scroll static .12 static 0
+		scale sinabs 2 sinabs 1.33
+		rotate -5
+
+		scaleadd static .05 static 0.033333333333333333333333333333333
+		offset -.5 -.5
+		alphashift .3 0.06 .6
+	}
+	{
+		map pics/con_binary2.tga
+		blendfunc blend
+		scroll static .12 static 0
+		scale sinabs 2 sinabs 1.33
+		rotate -5
+
+		scaleadd static .10 static 0.066666666666666666666666666666667
+		offset -.5 -.5
+		alphashift .3 0.036 .36
+	}
+	{
+		map pics/con_binary2.tga
+		blendfunc blend
+		scroll static .12 static 0
+		scale sinabs 2 sinabs 1.33
+		rotate -5
+
+		scaleadd static .15 static .1
+		offset -.5 -.5
+		alphashift .3 0.0216 0.216
+	}
+
+/* small left scroller */
+
+	{
+		map pics/con_binary1.tga
+		blendfunc blend
+		scroll static .09 static 0
+		scale cosabs 3 cosabs -2
+		rotate 2
+
+
+		offset -.5 -.5
+		alphashift .2 0.1 1
+	}
+	{
+		map pics/con_binary1.tga
+		blendfunc blend
+		scroll static .09 static 0
+		scale cosabs 3 cosabs -2
+		rotate 2
+
+		scaleadd static .05 static 0.033333333333333333333333333333333
+		offset -.5 -.5
+		alphashift .2 0.06 0.6
+	}
+	{
+		map pics/con_binary1.tga
+		blendfunc blend
+		scroll static .09 static 0
+		scale cosabs 3 cosabs -2
+		rotate 2
+
+		scaleadd static .10 static 0.066666666666666666666666666666667
+		offset -.5 -.5
+		alphashift .2 0.036 0.36
+	}
+	{
+		map pics/con_binary1.tga
+		blendfunc blend
+		scroll static .09 static 0
+		scale cosabs 3 cosabs -2
+		rotate 2
+
+		scaleadd static .15 static .1
+		offset -.5 -.5
+		alphashift .2 0.0216 0.216
+	}
+
+/* edge darkener / blue color */
+
+	{
+		map pics/con_darkedges.jpg
+		blendfunc GL_ZERO GL_SRC_COLOR 
+	}
+}

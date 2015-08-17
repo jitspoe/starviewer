@@ -1,0 +1,118 @@
+pb2menu 1
+
+widget 
+	type pic	
+	xcent 0
+	halign center	
+	yabs 16
+	pic "m_setup1s"
+
+widget
+	xcent -16
+	yabs 56
+	halign right
+	text "Hardware Gamma"
+	type checkbox
+	cvar vid_gamma_hw
+
+widget
+	type slider
+	yrel 16
+	text "Gamma"
+	cvar vid_gamma
+	min 2
+	max .7
+	halign right
+
+widget
+	type slider
+	yrel 16
+	text "Lighten"
+	cvar vid_lighten
+	min 0
+	max .5
+	halign right
+
+widget
+	yrel 16
+	type checkbox
+	text "Apply to sshots"
+	halign right
+	cvar gl_screenshot_applygamma
+
+widget
+	yrel 16
+	type checkbox
+	text "Overbright"
+	halign right
+	cvar gl_overbright
+
+widget	yrel 16
+	x 16
+	pic gamma_grey
+
+widget
+	yrel 40
+	text "Calibrate your monitor and/or the"
+widget yrel 8
+	text "settings here so every shade of grey"
+widget yrel 8
+	text "can be distinguished and the large"
+widget yrel 8
+	text "squares look approximately solid"
+widget yrel 8
+	text "in color from a distance."
+
+
+widget
+	yabs 56
+	xcent 0
+	pic gamma
+
+widget
+	xrel 73
+	pic gamma2
+
+widget
+	xrel -57
+	yrel 72
+	pic gamma_good
+	halign center
+
+widget
+	xrel 35
+	pic gamma_good2
+	halign center
+
+widget
+	xrel 35
+	pic gamma_bad1
+	halign center
+
+widget
+	xrel 35
+	pic gamma_bad2
+	halign center
+
+widget
+	xrel -105
+	yrel 34
+	text "Good"
+	halign center
+
+widget
+	xrel 35
+	text "Good"
+	halign center
+
+widget
+	xrel 35
+	halign center
+	text "Bad"
+
+widget
+	xrel 35
+	halign center
+	text "Bad"
+
+include back_include

@@ -1,0 +1,75 @@
+pb2menu 1
+
+
+include setup_header_include
+
+
+
+widget
+	xcent -85
+	yabs 64
+	halign center
+	text "Look"
+	command "menu samelevel setup_controls"
+
+widget
+	xrel 85
+	halign center
+	text "ˆEMove"
+	command "menu samelevel setup_controls_move"
+
+widget
+	xrel 85
+	halign center
+	text "Misc"
+	command "menu samelevel setup_controls_misc"
+
+
+
+widget
+	xcent 0
+	y 88
+	halign right
+	type checkbox
+	text "Always Run"
+	cvar cl_run
+
+widget
+	yrel 14
+	x 64
+	type field
+	width 4
+	text "Mouse Forward Speed"
+	cvar m_forward
+
+widget
+	yrel 14
+	x 64
+	type field
+	width 4
+	text "Mouse Side Speed"
+	cvar m_side
+
+widget
+	xcent 0
+	yrel 16
+	halign center
+	nobackground
+	type select
+	width 38
+	height 10
+	begin binds
+		"+forward"	"      Walk Forward: "
+		"+back"		"     Walk Backward: "
+		"+moveleft"	"         Step Left: "
+		"+moveright"	"        Step Right: "
+		"+moveup"	"         Up / Jump: "
+		"+movedown"	"     Down / Crouch: "
+		"+speed"	"        Walk / Run: "
+		"+strafe"	"            Strafe: "
+	end
+
+
+
+
+include back_include

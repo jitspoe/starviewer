@@ -1,0 +1,60 @@
+pb2menu 1
+
+background none
+type dialog
+allowgameinput
+
+widget
+	type pic
+	pic select1btl
+	ycent -112
+	xcent -154
+widget
+	type pic
+	yrel 4
+	picheight 8
+	pic select1bl
+
+widget
+	type pic
+	pic select1bt
+	yrel -4
+	xcent 0
+	halign center
+	picwidth 300
+widget
+	type pic
+	pic select1bm
+	yrel 4
+	halign center
+	picwidth 300
+	picheight 8
+
+widget
+	type pic
+	pic select1btr
+	yrel -4
+	xcent 150
+widget
+	type pic
+	pic select1br
+	yrel 4
+	picheight 8
+
+widget
+	type text
+	xcent 0
+	yrel -2
+	halign center
+	text "Player             Ping Kl Dt G CTime"
+
+widget
+	yrel 10
+	xcent 0
+	halign center
+	type select
+	width 38
+	rows 21
+	name "scores"
+	listsource "scores"
+	cvar menu_scores

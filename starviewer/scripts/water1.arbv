@@ -1,0 +1,39 @@
+!!ARBvp1.0
+
+#params: 0,x = width scale for refl uvs, 0,y = height scale for refl uv's, 0,z = flow offset1, 0,w = flow offset2.
+#params: 1 = eye position
+#program.local[1]
+
+TEMP pos;
+
+# regular output (need to do this to get the correct vertex positions)
+DP4 pos.x, state.matrix.mvp.row[0], vertex.position;
+DP4 pos.y, state.matrix.mvp.row[1], vertex.position;
+DP4 pos.z, state.matrix.mvp.row[2], vertex.position;
+DP4 pos.w, state.matrix.mvp.row[3], vertex.position;
+MOV result.position, pos;
+
+# Texture UV's for the reflection end up being  from -1, -1 to 1, 1 in screen space, so we need to scale flip them
+PARAM scaleFlipReflection = { 0.5, -0.5, 1.0, 1.0 }; # negative value is because we need to flip on Y.
+MUL result.texcoord[0], pos, scaleFlipReflection;
+
+# Scale and offset texture coords for a flowing effect
+PARAM texScale1 = { 0.008, 0.008, 1.0, 1.0 };
+PARAM texScale2 = { 0.007, 0.007, 1.0, 1.0 };
+TEMP offset1;
+MOV offset1, 1.0;
+MOV offset1.x, program.local[0].z;
+TEMP offset2;
+MOV offset2, 1.0;
+MOV offset2.x, program.local[0].w;
+MAD result.texcoord[1], vertex.texcoord[1], texScale1, offset1;
+MAD result.texcoord[2], vertex.texcoord[1], texScale2, offset2;
+
+# Store the vector from the vertex pos to the eye pos in texcoord 3
+TEMP vecToEye;
+SUB vecToEye, program.local[1], vertex.position;
+ABS vecToEye.z, vecToEye.z;
+MOV result.texcoord[3], vecToEye;
+
+
+END

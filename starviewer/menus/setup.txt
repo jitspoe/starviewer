@@ -1,0 +1,51 @@
+pb2menu 1
+
+include setup_header_include
+
+
+widget	type button
+	xcent 0
+	halign center
+	yabs 74
+	picwidth 180
+	text "Video Options"
+	command "menu setup_video"
+
+widget	type button
+	yrel 16
+	picwidth 180
+	text "Audio Options"
+	command "menu setup_audio"
+	halign center
+
+widget	type button
+	yrel 16
+	picwidth 180
+	text "Layout Options"
+	command "menu setup_layout"
+	halign center
+
+widget	type button
+	yrel 16
+	picwidth 180
+	text "Controls"
+	command "menu setup_controls"
+	halign center
+
+widget	type button
+	yrel 32
+	xcent -100
+	halign left
+	text "Save Config"
+	command "menu setup_savecfg"
+
+
+widget	type button
+	xcent 100
+	halign right
+	text "Load Config"
+	command "menu setup_loadcfg"
+
+
+
+include back_include

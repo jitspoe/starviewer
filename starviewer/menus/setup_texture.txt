@@ -1,0 +1,86 @@
+pb2menu 1
+
+widget 
+	type pic	
+	xcent 0
+	halign center	
+	yabs 16
+	pic "m_setup1s"
+
+widget
+	y 80
+	x 16
+	valign center
+	text "Anisotropic Filtering"
+	type select
+	width 5
+	rows 3
+	begin pairs
+		0	"Def."
+		1	"None"
+		2	"2x"
+		4	"4x"
+		8	"8x"
+		16	"16x"
+	end
+	cvar gl_anisotropy
+
+
+widget
+	yrel 28
+	type slider
+	cvar gl_texture_saturation
+	text "Texture Color Saturation"
+	min 0 max 1
+	cvar_default 1
+
+widget
+	yrel 16
+	type slider
+	cvar gl_lightmap_saturation
+	text "Lightmap Color Saturation"
+	min 0 max 1
+	cvar_default 1
+
+widget
+	yrel 16
+	type slider
+	cvar gl_lightmapgamma
+	text "Lightmap Gamma"
+	min 2 max .45
+	cvar_default .6
+
+widget
+	yrel 16
+	type checkbox
+	cvar gl_highres_textures
+	text "Enable High-Res Texture Pack"
+	cvar_default 1
+
+widget
+	yrel 16
+	type checkbox
+	cvar gl_ext_texture_compression
+	text "Compress Textures"
+	cvar_default 0
+
+widget
+	yrel 16
+	type slider
+	slidermin 2
+	slidermax 0
+	sliderinc -1
+	text "Texture Quality"
+	cvar gl_picmip
+	cvar_default 0
+
+
+
+widget
+	ybot -32
+	xcent 0
+	text "Apply"
+	halign center	
+	command "vid_restart"
+
+include back_include

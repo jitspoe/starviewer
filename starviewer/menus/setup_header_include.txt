@@ -1,0 +1,9 @@
+pb2menu 1
+
+widget 
+	type pic	
+	xcent 0
+	halign center	
+	yabs 16
+	pic "m_setup1s"
+

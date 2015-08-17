@@ -1,0 +1,47 @@
+pb2menu 1
+
+widget 
+	type pic	
+	xcent 0
+	halign center	
+	yabs 16
+	pic "m_setup1s"
+
+
+
+widget
+	x 64
+	y 64
+	text "Draw Crosshair"
+	cvar crosshair
+	type checkbox
+	valign center
+
+widget
+	yrel 14
+	text "Display Star Names"
+	cvar cl_drawstarnames
+	type checkbox
+	valign center
+
+widget
+	yrel 14
+	text "Hud/Text Scale"
+	type slider
+	min 1
+	max 6
+	inc 1
+	int
+	valign center
+	cvar_default "2"
+	cvar cl_hudscale
+
+widget
+	yrel 14
+	text "Text Shadow"
+	type checkbox
+	valign center
+	cvar gl_textshadow
+
+
+include back_include

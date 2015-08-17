@@ -1,0 +1,64 @@
+!!ARBfp1.0
+
+
+# Load the distortion textures and combine them (scrolling in opposite directions, tex coords handled in vertex program)
+TEMP distortColor;
+TEMP distortColor2;
+TXP distortColor, fragment.texcoord[1], texture[1], 2D;
+TXP distortColor2, fragment.texcoord[2], texture[1], 2D;
+SUB distortColor, distortColor, distortColor2;
+
+
+# Screen space is from -1,-1 to 1,1, so we need to scale by .5 and add .5.  We do the scale in the vertex program,
+# but we have to divide by w (perspective) and translate by .5 here, to avoid distortion.
+TEMP recipW;
+TEMP reflectionUV;
+RCP recipW, fragment.texcoord[0].w;
+MAD reflectionUV, recipW, fragment.texcoord[0], 0.5; # scale and center the reflection texture
+
+
+# Apply distortion texture to reflection UV's
+TEMP endColor;
+MAD reflectionUV, distortColor, recipW, reflectionUV;
+TEX endColor, reflectionUV, texture, 2D;
+
+
+# Load the ripple normal map
+TEMP normalColor;
+TEMP normalColor2;
+# Get texel color
+TXP normalColor, fragment.texcoord[1], texture[2], 2D;
+TXP normalColor2, fragment.texcoord[2], texture[2], 2D;
+# Combine normal maps
+ADD normalColor, normalColor, normalColor2;
+SUB normalColor, normalColor, 1.0;
+
+
+# Close enough that we don't need to bother...
+## Normalize normal texture
+#TEMP temp;
+#TEMP invLen;
+#DP3 temp, normalColor, normalColor;
+#RSQ invLen, temp.x;
+#MUL normalColor, invLen, normalColor;
+
+
+# Calculate normalized vector from pixel to camera
+TEMP eyeVec;
+TEMP inverseLength;
+DP3 inverseLength, fragment.texcoord[3], fragment.texcoord[3];
+RSQ inverseLength, inverseLength.x;
+MUL eyeVec, fragment.texcoord[3], inverseLength;
+
+# Fresenel approximation
+TEMP transparency;
+DP3 transparency.w, normalColor, eyeVec;
+SUB endColor.w, 1.0, transparency.w;
+MAX endColor.w, endColor.w, 0.35; # Min 35% transparent
+MIN endColor.w, endColor.w, 0.9; # Leave a LITTLE bit of transparency always
+
+
+MOV result.color, endColor;
+
+
+END
