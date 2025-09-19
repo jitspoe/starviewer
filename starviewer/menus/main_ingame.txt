@@ -4,7 +4,7 @@ include ingame_background_include
 
 widget
 	xcent 0
-	ycent -28
+	ycent -36
 	halign center
 	type button
 	picwidth 180
@@ -29,6 +29,15 @@ widget
 	picwidth 180
 	text "Setup"
 	command "menu setup"
+
+widget
+	yrel 16
+	xcent 0
+	halign center
+	type button
+	picwidth 180
+	text "Generate Skybox"
+	command "skybox"
 
 
 widget
